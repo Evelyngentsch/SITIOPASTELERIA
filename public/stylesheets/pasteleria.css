@@ -1,0 +1,53 @@
+.nav-link{
+    font-family: 'Playfair Display', serif;
+
+}
+.navbar-brand{
+    font-family: 'Playfair Display', serif;
+  
+}
+.dropdown-item{
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-outline-success{
+    font-family: 'Playfair Display', serif;
+}
+
+.footer{
+background-color: gray;
+}
+
+.carousel-item{
+    height: 600px ;
+    width: 100%;
+}
+
+h3{
+    font-family: 'Playfair Display', serif;
+}
+
+h2{
+text-align: center;
+font-family: 'Playfair Display', serif;
+}
+
+.personas{
+    border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+}
+
+p{
+    font-family: 'Playfair Display', serif;
+}
+
+.container{
+padding: 20px;
+box-sizing: border-box;
+}
+
+.card-group{
+    padding: 20px;
+box-sizing: border-box;
+}
