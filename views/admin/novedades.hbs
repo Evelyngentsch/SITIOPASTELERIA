@@ -1,34 +1,51 @@
 <div class="container logout">
-    {{!-- first row --}}
-    <div class="row">
-        <div class="col ">
-            <p class="log">
-                <span>Hola {{usuario}}!</span>
-                <a href="/admin/login/logout" class="btn btn-danger">Cerrar Sesión
-                    <i class="bi bi-house"></i>
-                </a>
-            </p>
-        </div>
-    </div>
-</div> 
-
-
-<h2> No te pierdad las últimas novedades de la pasteleria!</h2>
-
-
-<div class="container text-center">
   <div class="row">
-    <div class="col">
-    <h3> Nuevas galletitas</h3>
-    <img src="/public/images/galletitas.jpg" alt="">
-    </div>
-    <div class="col">
-      <h3>Sumamos tortas para casamientos!</h3>
-      <img src="/public/images/casamiento.jpg" alt="">
-    </div>
-    <div class="col">
-      <h3>Probá los nuevos sabores de muffins</h3>
-      <img src="/public/images/muffinnuevo.jpg" alt="">
+    <div class="col ">
+      <p class="log">
+        <span>Hola {{usuario}}!</span>
+        <a href="/admin/login/logout" class="btn btn-danger">Cerrar Sesión
+          <i class="bi bi-house"></i>
+        </a>
+      </p>
     </div>
   </div>
 </div>
+
+
+<div class="row">
+  <div class="col-7" style="margin-top: -9px;">
+    <h3 class="text-center">No te pierdas las nuevas novedes de la pastelería!</h3>
+  </div>
+  <div class="col-5 text-right">
+    <a href="" class="btn btn-success"> <i class="fa fa-plus"></i> Nuevo </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Título</th>
+          <th scope="col" class="text-right">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each novedades}}
+        <tr>
+          <th scope="row">{{id}}</th>
+          <td>{{titulo}}</td>
+          <td class="text-right">
+             <a href="#" title="Editar" class="btn btn-sm btn-secondary">
+              <i class="fas fa-pencil-alt"></i></a> 
+            <a href="/admin/novedades/eliminar/{{id}}" title="Eliminar" class="btn btn-sm btn-secondary" id="borrar">
+              <i class="fas fa-trash" ></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+

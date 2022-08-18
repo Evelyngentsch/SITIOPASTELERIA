@@ -24,6 +24,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page"  data-scroll href="#conocenos" style="color: beige;">Quienes somos</a>
                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"  data-scroll href="#novedades" style="color: beige;">Novedades</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" data-scroll href="#visitanos" style="color: beige;">Visitanos</a>
                     </li>
@@ -31,10 +34,6 @@
                         <a class="nav-link" data-scroll href="#contacto" style="color: beige;">Contacto</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success" type="submit" style="color: beige;">Buscar</button>
-                </form>
             </div>
         </div>
     </nav>
@@ -113,6 +112,45 @@
             </div>
         </div>
     </div>
+    
+<section class="container-fluid p-5">
+  <div id="novedades" class="row py-4">
+    <div class="col-md offset-md-0 py-5">
+      <h2>Novedades</h2>
+      <ul class="lista-novedades">
+        {{#each novedades}}
+        <li>
+          <a href="" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img
+              src="{{image}}" width="120">{{titulo}}
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{{#each novedades}}
+<div  class="modal fade" id="modal{{id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="staticBackdropLabel">{{titulo}}</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>{{subtitulo}}</h6>
+        <p>{{ cuerpo }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+
     <h2> Tortas Clásicas</h2>
     <div class="card-group" id="tortas">
         <div class="card">
