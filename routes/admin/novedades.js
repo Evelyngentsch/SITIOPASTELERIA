@@ -24,7 +24,7 @@ router.get('/', async function (req, res, next) {
   router.get('/agregar', (req, res, next) => {
     res.render ('admin/agregar', {
       layout: 'admin/layout'
-    })
+    });
   });
 
 
@@ -53,8 +53,8 @@ router.get('/', async function (req, res, next) {
 
 
 router.get('/modificar/:id', async (req, res, next) => {
-  var id = req.params.id;
-  var novedad = await novedadesModel.getNovedadById(id);
+  let id = req.params.id;
+  let novedad = await novedadesModel.getNovedadById(id);
   res.render('admin/modificar', {
       layout: 'admin/layout',
       novedad
@@ -64,7 +64,7 @@ router.get('/modificar/:id', async (req, res, next) => {
 
 router.post('/modificar', async (req, res, next) => {
   try {
-   var obj = {
+   let obj = {
        titulo: req.body.titulo,
        subtitulo: req.body.subtitulo,
        cuerpo: req.body.cuerpo
