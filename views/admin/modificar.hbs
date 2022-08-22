@@ -1,6 +1,6 @@
 <div class="container contact-form">
        <h3>Modificar la novedad</h3>
-    <form class="flexer" method="post" action="/admin/novedades/modificar" enctype="multipart/form-data">
+    <form class="flexer" method="post" action="/admin/novedades/modificar" >
         <input type="hidden" value="{{novedad.id}}" name="id">
         <div class="row">
             <div class="col-6">
@@ -11,7 +11,7 @@
                 <div class="">
                     <div class="form-group">
                         <h2>Subtítulo:</h2>
-                        <textarea maxlength="250" name="subtitle" class="form-control" placeholder="Subtítulo"
+                        <textarea maxlength="250" name="subtitulo" class="form-control" placeholder="Subtítulo"
                             style="width: 100%; height: 175px;">{{novedad.subtitulo}}</textarea>
                     </div>
                 </div>
