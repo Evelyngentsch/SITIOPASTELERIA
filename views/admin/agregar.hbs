@@ -1,0 +1,42 @@
+<div class="container contact-form">
+    <form class="flexer" method="post" action="/admin/novedades/agregar" enctype="multipart/form-data">
+        <h3>Agrega una nueva novedad!</h3>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <h2>Título:</h2>
+                    <textarea maxlength="250" name="title" class="form-control" placeholder="Título"
+                        style="width: 100%; height: 125px;"></textarea>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        <h2>Subtítulo:</h2>
+                        <textarea maxlength="250" name="subtitle" class="form-control" placeholder="Subtítulo"
+                            style="width: 100%; height: 175px;"></textarea>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <h2>Describa la novedad:</h2>
+                    <textarea  name="modalBody" class="form-control" placeholder="Novedad"
+                        style="width: 100%; height: 300px;"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Subir imagen: <input type="file" name="image" id="image"></label>
+            </div>
+
+        </div>
+        <div class="py-4">
+            <div class="form-group">
+                <button type="submit" class="btnContact btn btn-danger">Subir</button>
+            </div>
+        </div>
+        {{#if error}}
+        <h5>{{message}}</h5>
+        {{/if}}
+    </form>
+</div>
