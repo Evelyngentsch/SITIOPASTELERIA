@@ -17,7 +17,7 @@ async function deleteNovedadesById(id) {
 async function insertNovedad(obj) {
     try {
         var query = 'insert into novedades set ?';
-        var rows = await pool.query(query, [obj])
+        var rows = await pool.query(query, [obj]);
         return rows;
     } catch (error) {
         console.log(error);
@@ -44,15 +44,6 @@ async function modificarNovedadById(obj, id) {
     }
 }
 
-async function modificarNovedadById(obj, id) {
-    try {
-        var query = 'update novedades set ? where id = ?';
-        var rows = await pool.query(query, [obj, id]);
-        return rows;
-    } catch (error) {
-        throw error;
-    }
-}
 
 module.exports = { getNovedades, deleteNovedadesById, insertNovedad, getNovedadById, modificarNovedadById }
 
